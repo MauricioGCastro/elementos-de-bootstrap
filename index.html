@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elementos Bootstrap</title>
+    <!-- agregar los meta que faltan -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<body>
+    <header>
+        <!-- tamaños de dispositivos: sm small / md medium / lg large
+        bg es background / dark es el color 
+        navbar-light es el color de las letras con respecto al fondo
+        -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="index.html">
+                <img src="img/bootstrap-solid.svg" alt="bootstrap-logo" width="35px" class="mr-1">
+                Bootstrap
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Productos</a>
+                    </li>
+                    </li>
+                    <li class="nav-item">
+                        <!-- boton desactivado, no se puede hacer click -->
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <section class="container border border-primary">
+        <h1>Prueba de Bootstrap</h1>
+        <p>Contenedor</p>
+    </section>
+    <section class="container-fluid border border-danger mt-4">
+        <!-- margenes: mt / mb / mr / ml / my / mx -->
+        <p>Contenedor Fluido</p>
+    </section>
+    <section class="container">
+        <article>
+            <h2>Ejemplo de Títulos</h2>
+            <hr>
+            <h4 class="display-4">Título Display 1 al 4</h4>
+        </article>
+        <article class="my-4">
+            <h2>Colores y Texto</h2>
+            <hr>
+            <P class="text-primary">primary</P>
+            <p class="text-secondary">secondary</p>
+            <p class="text-success">success</p>
+            <p class="text-warning">warning</p>
+            <p class="text-info">info</p>
+            <p class="text-danger">danger</p>
+            <p class="text-light bg-info">light</p>
+            <p class="text-dark">dark</p>
+        </article>
+        <article>
+            <h2>Botones</h2>
+            <hr>
+            <button class="btn-primary">Boton de prueba</button>
+            <button class="btn-success">Boton de prueba</button>
+            <button class="btn-warning">Boton de prueba</button>
+            <button class="btn-danger">Boton de prueba</button>
+            <hr>
+            <button class="btn btn-outline-info">Boton de prueba 2</button>
+            <button class="btn btn-outline-danger">Boton de prueba 2</button>
+            <button class="btn btn-outline-warning">Boton de prueba 2</button>
+            <button class="btn btn-outline-secondary">Boton de prueba 2</button>
+            <hr>
+            <h2>Variantes</h2>
+            <!-- botones desactivados y botones activados como si estuvieran siendo apretados -->
+            <button class="btn-primary disabled">Boton de prueba</button>
+            <button class="btn btn-outline-warning disabled">Boton de prueba 2</button>
+            <button class="btn-primary active">Boton de prueba</button>
+            <button class="btn btn-outline-warning active">Boton de prueba 2</button>
+            <hr>
+            <h2>Tamaños</h2>
+            <button class="btn btn-success btn-sm">Boton pequeño</button>
+            <button class="btn btn-success">Boton Normal</button>
+            <button class="btn btn-success btn-lg">Boton grande</button>
+        </article>
+        <article>
+            <h2>Lista</h2>
+            <hr>
+            <ul class="list-group shadow bg-white rounded">
+                <li class="list-group-item bg-info">Intem 1</li>
+                <!-- le da un tono pastel a los mismos colores predeterminados -->
+                <li class="list-group-item list-group-item-info ">Intem 2</li>
+                <li class="list-group-item">Intem 3</li>
+            </ul>
+        </article>
+        <br>
+        <!-- SISTEMA DE GRILLAS -->
+        <article>
+            <h2>Sistema de Grillas</h2>
+            <hr>
+            <div class="row">
+                <div class="col-sm-12 col-md-4 col-lg-3 border border-danger">Item 1</div>
+                <div class="col-sm-12 col-md-4 col-lg-3 border border-danger">Item 2</div>
+                <div class="col-sm-12 col-md-4 col-lg-3 border border-danger">Item 3</div>
+                <div class="col-sm-12 col-md-4 col-lg-3 border border-danger">Item 3</div>
+
+            </div>
+        </article>
+        <article class="my-4">
+            <h2>Contactos</h2>
+            <hr>
+            <!-- no-gutters saca todos los margenes que traen por defecto las cosas embebed -->
+            <div class="row">
+                <div class="col-sm-12 col-md-6">
+                    <iframe class="w-100"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3560.1049265941006!2d-65.20937284869827!3d-26.83661479641713!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94225d3ad7f30f1d%3A0xf8606cd659b8e3e4!2sRollingCode%20School!5e0!3m2!1ses-419!2sar!4v1587066221227!5m2!1ses-419!2sar"
+                        height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+                        tabindex="0"></iframe>
+                </div>
+                <div class="col-sm-12 col-md-6">
+                    <h4>Completa el siguiente formulario</h4>
+                    <form class="shadow p-3 mb-5 bg-white rounded">
+                        <div class="formgroup">
+                            <label>Nombre y Apellido</label>
+                            <input type="text" placeholder="Juan Perez" required class="form-control">
+                        </div>
+                        <div class="formgroup">
+                            <label>DNI</label>
+                            <input type="number" placeholder="33999888" required class="form-control">
+                        </div>
+                        <div class="formgroup">
+                            <labe>Email</labe>
+                            <input type="email" placeholder="juanperez@mail.com.ar" class="form-control">
+                        </div>
+                        <div class="formgroup">
+                            <label>Consulta</label>
+                            <textarea rows="4" placeholder="Ingrese su consulta aquí." class="form-control"></textarea>
+                        </div>
+                        <button class="btn btn-outline-primary my-2" type="submit" data-toggle="modal"
+                            data-target="#exampleModal">Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </article>
+    </section>
+
+    <footer class="bg-dark text-light">
+        <div class="row container-fluid">
+            <div class="col-sm-12 col-md-4 col-lg-4 mt-5">
+                <p>Primer Columna</p>
+                <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea totam porro consequuntur architecto quisquam fuga.</P>
+            </div>
+            <div class="col-sm-12 col-md-4 col-lg-4 mt-5">
+                <p>Segunda Columna</p>
+                <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, tempora quidem culpa architecto optio at iure repellat! Error in pariatur excepturi necessitatibus dolore aliquam amet vel architecto. Excepturi, deleniti praesentium.</P>
+            </div>
+            <div class="col-sm-12 col-md-4 col-lg-4 mt-5">
+                <p>Tercer Columna</p>
+                <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea totam porro consequuntur architecto quisquam fuga.</P>
+            </div>
+        <hr class="col-sm-12 col-md-12 col-lg-12">
+        <p class="col-sm-12 col-md-12 col-lg-12 text-center my-3"> &copy; Todos los Derechos Reservados - Comisión 7D</p>
+    </footer>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Mensaje</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="alert alert-success" role="alert">
+                        Su mensaje se envió correctamente we!
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Salir</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Libreria de bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
